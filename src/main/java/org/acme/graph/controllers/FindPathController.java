@@ -22,8 +22,8 @@ public class FindPathController {
 		@RequestParam(value = "destination", required = true)
 		String destinationId
 	) {
-		DijkstraPathFinder pathFinder = new DijkstraPathFinder(graph);
 		Vertex origin = graph.findVertex(originId);
+		DijkstraPathFinder pathFinder = new DijkstraPathFinder(graph);
 		Vertex destination = graph.findVertex(destinationId);
 		return pathFinder.findPath(origin, destination);
 	}
